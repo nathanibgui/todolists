@@ -8,6 +8,9 @@ defmodule TodolistWeb.UserController do
 
   def index(conn, _params) do
     users = Accounts.list_users()
+
+    #IO.inspect(users);
+
     render(conn, :index, users: users)
   end
 

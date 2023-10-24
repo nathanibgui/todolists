@@ -6,7 +6,8 @@ defmodule Todolist.Accounts.User do
     field :first_name, :string
     field :last_name, :string
 
-    timestamps(type: :utc_datetime)
+    has_many :tasks, Todolist.Task
+    timestamps()
   end
 
   @doc false

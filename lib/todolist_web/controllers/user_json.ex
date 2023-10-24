@@ -5,14 +5,16 @@ defmodule TodolistWeb.UserJSON do
   Renders a list of users.
   """
   def index(%{users: users}) do
-    %{data: for(user <- users, do: data(user))}
+    #%{data: for(user <- users, do: data(user))}
+    for user <- users, do: data(user)
   end
+
 
   @doc """
   Renders a single user.
   """
   def show(%{user: user}) do
-    %{data: data(user)}
+    data(user)
   end
 
   defp data(%User{} = user) do
